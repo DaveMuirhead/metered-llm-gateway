@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: metered-llm-gateway
+  config:
+    import: optional:file:.env[.properties]
+stripe:
+  api-key: ${STRIPE_API_KEY}
