@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: metered
+      POSTGRES_USER: metered
+      POSTGRES_PASSWORD: metered
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U metered -d metered"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  pgdata:
