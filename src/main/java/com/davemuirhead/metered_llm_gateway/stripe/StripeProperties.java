@@ -1,4 +1,4 @@
-package com.davemuirhead.metered_llm_gateway.setup;
+package com.davemuirhead.metered_llm_gateway.stripe;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
@@ -7,6 +7,6 @@ import jakarta.validation.constraints.NotBlank;
 
 @Validated 
 @ConfigurationProperties(prefix = "stripe")
-public record StripeProperties(@NotBlank String apiKey) {
+public record StripeProperties(@NotBlank String apiKey, @NotBlank String metadataApp) {
 
 }

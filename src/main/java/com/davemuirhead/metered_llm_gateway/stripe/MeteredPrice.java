@@ -1,4 +1,4 @@
-package com.davemuirhead.metered_llm_gateway.setup;
+package com.davemuirhead.metered_llm_gateway.stripe;
 
 import java.math.BigDecimal;
 

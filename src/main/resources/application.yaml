@@ -8,3 +8,7 @@ spring:
     locations: classpath:db/migration
 stripe:
   api-key: ${STRIPE_API_KEY}
+  metadata-app: ${spring.application.name}
+  demo-customer:
+      email: demo-tenant@example.com
+      name: Demo Tenant
